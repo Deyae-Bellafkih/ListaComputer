@@ -19,4 +19,8 @@ public class Computer {
     public int getCapRAM() {
         return capRAM;
     }
+
+    public String toString() {
+        return "Computer[ marca: " + marca + ", processore: " + processore + ", capacità della RAM: " + capRAM + " ]";
+    }
 }
