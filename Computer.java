@@ -1,4 +1,4 @@
-public class Computer {
+public class Computer implements Comparable<Computer> {
     private String marca;
     private String processore;
     private int capRAM;
@@ -20,7 +20,20 @@ public class Computer {
         return capRAM;
     }
 
+    public int compareTo(Computer c) {
+        if (this.capRAM < c.capRAM) {
+            return -1;
+        }
+        else if (this.capRAM == c.capRAM) {
+            return 0;
+        } else
+            return 1;
+        }
+
     public String toString() {
         return "Computer[ marca: " + marca + ", processore: " + processore + ", capacità della RAM: " + capRAM + " ]";
     }
 }
+
+
+
