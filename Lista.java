@@ -90,6 +90,23 @@ public class Lista {
         return -1;
     }
 
+    public void stampa() {
+        if (head == null) {
+            System.out.println("La lista è vuota.");
+            return;
+        }
+        Nodo current = head;
+        int index = 0;
+        while (current != null) {
+            System.out.println("[" + index + "] " + current.getValue());
+            current = current.getNext();
+            index++;
+        }
+    }
+
+
+
+
     public void eliminaValore(Computer value) {
         while (head != null && head.getValue().equals(value)) {
             head = head.getNext();
